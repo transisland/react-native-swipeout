@@ -46,7 +46,8 @@ var NativeButton = (0, _createReactClass2.default)({
     disabledStyle: _reactNative.Text.propTypes.style,
     children: _propTypes2.default.node.isRequired,
     underlayColor: _propTypes2.default.string,
-    background: _reactNative.TouchableNativeFeedback.propTypes ? _reactNative.TouchableNativeFeedback.propTypes.background : _propTypes2.default.any
+    background: _reactNative.TouchableNativeFeedback.propTypes ? _reactNative.TouchableNativeFeedback.propTypes.background : _propTypes2.default.any,
+    testID: _propTypes2.default.string
   }),
 
   statics: {
@@ -92,7 +93,8 @@ var NativeButton = (0, _createReactClass2.default)({
       onPressIn: this.props.onPressIn,
       onPressOut: this.props.onPressOut,
       onLongPress: this.props.onLongPress,
-      pressRetentionOffset: this.props.pressRetentionOffset
+      pressRetentionOffset: this.props.pressRetentionOffset,
+      testID: this.props.testID
     };
 
     // Render Native Android Button

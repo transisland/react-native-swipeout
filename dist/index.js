@@ -45,7 +45,8 @@ var SwipeoutBtn = (0, _createReactClass2.default)({
     onPress: _propTypes2.default.func,
     text: _propTypes2.default.node,
     type: _propTypes2.default.string,
-    underlayColor: _propTypes2.default.string
+    underlayColor: _propTypes2.default.string,
+    testID: _propTypes2.default.string
   },
 
   getDefaultProps: function getDefaultProps() {
@@ -59,7 +60,8 @@ var SwipeoutBtn = (0, _createReactClass2.default)({
       disabled: false,
       text: 'Click me',
       type: '',
-      width: 0
+      width: 0,
+      testID: null
     };
   },
 
@@ -99,7 +101,8 @@ var SwipeoutBtn = (0, _createReactClass2.default)({
         underlayColor: this.props.underlayColor,
         disabled: this.props.disabled,
         style: [_styles2.default.swipeoutBtnTouchable, styleSwipeoutBtn],
-        textStyle: styleSwipeoutBtnText },
+        textStyle: styleSwipeoutBtnText,
+        testID: btn.testID },
       btn.component ? _react2.default.createElement(
         _reactNative.View,
         { style: styleSwipeoutBtnComponent },
@@ -477,7 +480,8 @@ var Swipeout = (0, _createReactClass2.default)({
       text: btn.text,
       type: btn.type,
       underlayColor: btn.underlayColor,
-      width: this.state.btnWidth
+      width: this.state.btnWidth,
+      testID: btn.testID
     });
   }
 });

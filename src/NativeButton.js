@@ -37,6 +37,7 @@ const NativeButton = createReactClass({
     children: PropTypes.node.isRequired,
     underlayColor: PropTypes.string,
     background: (TouchableNativeFeedback.propTypes) ? TouchableNativeFeedback.propTypes.background : PropTypes.any,
+    testID: PropTypes.string,
   },
 
   statics: {
@@ -83,6 +84,7 @@ const NativeButton = createReactClass({
       onPressOut: this.props.onPressOut,
       onLongPress: this.props.onLongPress,
       pressRetentionOffset: this.props.pressRetentionOffset,
+      testID: this.props.testID,
     };
 
     // Render Native Android Button
